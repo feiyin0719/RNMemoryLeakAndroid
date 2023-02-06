@@ -4,13 +4,9 @@ import android.content.Intent
 import android.os.Bundle
 import com.google.android.material.snackbar.Snackbar
 import androidx.appcompat.app.AppCompatActivity
-import androidx.navigation.findNavController
-import androidx.navigation.ui.AppBarConfiguration
-import androidx.navigation.ui.navigateUp
-import androidx.navigation.ui.setupActionBarWithNavController
 import com.rnmemoryleakandroid.databinding.ActivityLaunchBinding
 
-class LaunchActivity : AppCompatActivity() {
+class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityLaunchBinding
 
@@ -29,7 +25,7 @@ class LaunchActivity : AppCompatActivity() {
                 .setAction("Action", null).show()
         }
         binding.content.openRN.setOnClickListener {
-            startActivity(Intent(LaunchActivity@ this, MainActivity::class.java))
+            startActivity(Intent(MainActivity@ this, RNActivity::class.java))
         }
     }
 
